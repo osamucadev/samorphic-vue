@@ -35,6 +35,7 @@
     "@storybook/addon-docs": "^9.0.2",
     "@storybook/addon-onboarding": "^9.0.2",
     "@storybook/addon-vitest": "^9.0.2",
+    "@storybook/vue3": "^9.0.2",
     "@storybook/vue3-vite": "^9.0.2",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vitest/browser": "^3.1.4",
