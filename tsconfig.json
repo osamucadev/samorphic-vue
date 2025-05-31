@@ -1,19 +1,19 @@
 {
+  "include": ["src"],
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "strict": true,
     "declaration": true,
-    "declarationDir": "dist",
     "emitDeclarationOnly": true,
-    "outDir": "dist",
-    "esModuleInterop": true,
+    "declarationDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "strict": true,
     "skipLibCheck": true,
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "."
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+    "jsx": "preserve"
+  }
 }
