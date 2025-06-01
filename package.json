@@ -18,15 +18,16 @@
   "scripts": {
     "build": "vite build"
   },
+  "main": "./dist/samorphic-vue.umd.js",
+  "module": "./dist/samorphic-vue.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/samorphic-vue.es.js",
-      "require": "./dist/samorphic-vue.umd.cjs"
+      "import": "./dist/samorphic-vue.mjs",
+      "require": "./dist/samorphic-vue.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
-  "main": "dist/samorphic-vue.umd.cjs",
-  "module": "dist/samorphic-vue.es.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
