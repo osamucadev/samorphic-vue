@@ -1,15 +1,15 @@
-import { defineComponent as _, openBlock as c, createElementBlock as d, renderSlot as r } from "vue";
-const a = ["disabled"], l = /* @__PURE__ */ _({
+import { defineComponent as c, openBlock as _, createElementBlock as r, renderSlot as d } from "vue";
+import './index.css';const a = ["disabled"], l = /* @__PURE__ */ c({
   __name: "SButton",
   props: {
     disabled: { type: Boolean }
   },
   setup(e) {
-    return (t, o) => (c(), d("button", {
+    return (t, o) => (_(), r("button", {
       class: "s-button",
       disabled: t.disabled
     }, [
-      r(t.$slots, "default", {}, void 0, !0)
+      d(t.$slots, "default", {}, void 0, !0)
     ], 8, a));
   }
 });
@@ -18,7 +18,7 @@ const p = (e, t) => {
   for (const [n, s] of t)
     o[n] = s;
   return o;
-}, f = /* @__PURE__ */ p(l, [["__scopeId", "data-v-c8fd2cf1"]]);
+}, i = /* @__PURE__ */ p(l, [["__scopeId", "data-v-8649c7cc"]]);
 export {
-  f as SButton
+  i as SButton
 };
