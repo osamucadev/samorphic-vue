@@ -1,47 +1,47 @@
-import { defineComponent as c, openBlock as d, createElementBlock as u, renderSlot as r, createElementVNode as i, normalizeClass as m, ref as v, watch as f, withDirectives as h, vModelDynamic as y } from "vue";
-import './index.css';const V = ["disabled"], S = /* @__PURE__ */ c({
+import { defineComponent as c, openBlock as _, createElementBlock as d, renderSlot as r, createElementVNode as i, normalizeClass as m, ref as v, watch as f, withDirectives as h, vModelDynamic as y } from "vue";
+import './index.css';const S = ["disabled"], V = /* @__PURE__ */ c({
   __name: "SButton",
   props: {
     disabled: { type: Boolean }
   },
-  setup(n) {
-    return (t, o) => (d(), u("button", {
+  setup(s) {
+    return (e, t) => (_(), d("button", {
       class: "s-button",
-      disabled: t.disabled
+      disabled: e.disabled
     }, [
-      r(t.$slots, "default", {}, void 0, !0)
-    ], 8, V));
+      r(e.$slots, "default", {}, void 0, !0)
+    ], 8, S));
   }
 });
-const p = (n, t) => {
-  const o = n.__vccOpts || n;
-  for (const [l, e] of t)
-    o[l] = e;
-  return o;
-}, k = /* @__PURE__ */ p(S, [["__scopeId", "data-v-dcc6fa7a"]]), b = ["aria-pressed"], w = /* @__PURE__ */ c({
+const p = (s, e) => {
+  const t = s.__vccOpts || s;
+  for (const [a, o] of e)
+    t[a] = o;
+  return t;
+}, x = /* @__PURE__ */ p(V, [["__scopeId", "data-v-dcc6fa7a"]]), b = ["aria-pressed"], $ = /* @__PURE__ */ c({
   __name: "SSwitch",
   props: {
     modelValue: { type: Boolean }
   },
   emits: ["update:modelValue"],
-  setup(n, { emit: t }) {
-    const o = n, l = t;
-    function e() {
-      l("update:modelValue", !o.modelValue);
+  setup(s, { emit: e }) {
+    const t = s, a = e;
+    function o() {
+      a("update:modelValue", !t.modelValue);
     }
-    return (s, a) => (d(), u("button", {
+    return (n, l) => (_(), d("button", {
       class: "s-switch",
-      onClick: e,
-      "aria-pressed": s.modelValue,
+      onClick: o,
+      "aria-pressed": n.modelValue,
       role: "switch"
     }, [
       i("div", {
-        class: m(["s-thumb", { active: s.modelValue }])
+        class: m(["s-thumb", { active: n.modelValue }])
       }, null, 2)
     ], 8, b));
   }
 });
-const C = /* @__PURE__ */ p(w, [["__scopeId", "data-v-06d59c3f"]]), B = { class: "s-input-wrapper" }, I = ["type", "placeholder"], g = /* @__PURE__ */ c({
+const D = /* @__PURE__ */ p($, [["__scopeId", "data-v-06d59c3f"]]), g = { class: "s-input-wrapper" }, w = ["type", "placeholder"], I = /* @__PURE__ */ c({
   __name: "SInput",
   props: {
     modelValue: {},
@@ -49,29 +49,41 @@ const C = /* @__PURE__ */ p(w, [["__scopeId", "data-v-06d59c3f"]]), B = { class:
     type: {}
   },
   emits: ["update:modelValue"],
-  setup(n, { emit: t }) {
-    const o = n, l = t, e = v(o.modelValue);
+  setup(s, { emit: e }) {
+    const t = s, a = e, o = v(t.modelValue);
     return f(
-      () => o.modelValue,
-      (s) => {
-        s !== e.value && (e.value = s);
+      () => t.modelValue,
+      (n) => {
+        n !== o.value && (o.value = n);
       }
-    ), (s, a) => (d(), u("div", B, [
+    ), (n, l) => (_(), d("div", g, [
       h(i("input", {
         class: "s-input",
-        type: s.type,
-        placeholder: s.placeholder,
-        "onUpdate:modelValue": a[0] || (a[0] = (_) => e.value = _),
-        onInput: a[1] || (a[1] = (_) => l("update:modelValue", e.value))
-      }, null, 40, I), [
-        [y, e.value]
+        type: n.type,
+        placeholder: n.placeholder,
+        "onUpdate:modelValue": l[0] || (l[0] = (u) => o.value = u),
+        onInput: l[1] || (l[1] = (u) => a("update:modelValue", o.value))
+      }, null, 40, w), [
+        [y, o.value]
       ])
     ]));
   }
 });
-const x = /* @__PURE__ */ p(g, [["__scopeId", "data-v-0e0c92c6"]]);
+const E = /* @__PURE__ */ p(I, [["__scopeId", "data-v-0e0c92c6"]]), B = { class: "s-card" }, C = /* @__PURE__ */ c({
+  __name: "SCard",
+  props: {
+    padding: {}
+  },
+  setup(s) {
+    return (e, t) => (_(), d("div", B, [
+      r(e.$slots, "default", {}, void 0, !0)
+    ]));
+  }
+});
+const z = /* @__PURE__ */ p(C, [["__scopeId", "data-v-774e84bc"]]);
 export {
-  k as SButton,
-  x as SInput,
-  C as SSwitch
+  x as SButton,
+  z as SCard,
+  E as SInput,
+  D as SSwitch
 };
