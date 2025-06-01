@@ -1,24 +1,48 @@
-import { defineComponent as c, openBlock as _, createElementBlock as r, renderSlot as d } from "vue";
-import './index.css';const a = ["disabled"], l = /* @__PURE__ */ c({
+import { defineComponent as c, openBlock as l, createElementBlock as _, renderSlot as r, createElementVNode as u, normalizeClass as i } from "vue";
+import './index.css';const p = ["disabled"], m = /* @__PURE__ */ c({
   __name: "SButton",
   props: {
     disabled: { type: Boolean }
   },
-  setup(e) {
-    return (t, o) => (_(), r("button", {
+  setup(t) {
+    return (e, o) => (l(), _("button", {
       class: "s-button",
-      disabled: t.disabled
+      disabled: e.disabled
     }, [
-      d(t.$slots, "default", {}, void 0, !0)
-    ], 8, a));
+      r(e.$slots, "default", {}, void 0, !0)
+    ], 8, p));
   }
 });
-const p = (e, t) => {
-  const o = e.__vccOpts || e;
-  for (const [n, s] of t)
-    o[n] = s;
+const d = (t, e) => {
+  const o = t.__vccOpts || t;
+  for (const [s, n] of e)
+    o[s] = n;
   return o;
-}, i = /* @__PURE__ */ p(l, [["__scopeId", "data-v-8649c7cc"]]);
+}, b = /* @__PURE__ */ d(m, [["__scopeId", "data-v-dcc6fa7a"]]), f = ["aria-pressed"], v = /* @__PURE__ */ c({
+  __name: "SSwitch",
+  props: {
+    modelValue: { type: Boolean }
+  },
+  emits: ["update:modelValue"],
+  setup(t, { emit: e }) {
+    const o = t, s = e;
+    function n() {
+      s("update:modelValue", !o.modelValue);
+    }
+    return (a, h) => (l(), _("button", {
+      class: "s-switch",
+      onClick: n,
+      "aria-pressed": a.modelValue,
+      role: "switch"
+    }, [
+      u("div", {
+        class: i(["s-thumb", { active: a.modelValue }])
+      }, null, 2)
+    ], 8, f));
+  }
+});
+const y = /* @__PURE__ */ d(v, [["__scopeId", "data-v-06d59c3f"]]);
 export {
-  i as SButton
+  b as SButton,
+  y as SSwitch
 };

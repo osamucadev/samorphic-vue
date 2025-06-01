@@ -15,7 +15,6 @@ defineProps<{ disabled?: boolean }>();
   padding: 0.75rem 1.5rem;
   border-radius: 1rem;
   font-weight: 600;
-  font-family: "Urbanist", sans-serif;
   background: #e0e0e0;
   color: #444;
   border: none;
