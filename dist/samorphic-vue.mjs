@@ -1,48 +1,77 @@
-import { defineComponent as c, openBlock as l, createElementBlock as _, renderSlot as r, createElementVNode as u, normalizeClass as i } from "vue";
-import './index.css';const p = ["disabled"], m = /* @__PURE__ */ c({
+import { defineComponent as c, openBlock as d, createElementBlock as u, renderSlot as r, createElementVNode as i, normalizeClass as m, ref as v, watch as f, withDirectives as h, vModelDynamic as y } from "vue";
+import './index.css';const V = ["disabled"], S = /* @__PURE__ */ c({
   __name: "SButton",
   props: {
     disabled: { type: Boolean }
   },
-  setup(t) {
-    return (e, o) => (l(), _("button", {
+  setup(n) {
+    return (t, o) => (d(), u("button", {
       class: "s-button",
-      disabled: e.disabled
+      disabled: t.disabled
     }, [
-      r(e.$slots, "default", {}, void 0, !0)
-    ], 8, p));
+      r(t.$slots, "default", {}, void 0, !0)
+    ], 8, V));
   }
 });
-const d = (t, e) => {
-  const o = t.__vccOpts || t;
-  for (const [s, n] of e)
-    o[s] = n;
+const p = (n, t) => {
+  const o = n.__vccOpts || n;
+  for (const [l, e] of t)
+    o[l] = e;
   return o;
-}, b = /* @__PURE__ */ d(m, [["__scopeId", "data-v-dcc6fa7a"]]), f = ["aria-pressed"], v = /* @__PURE__ */ c({
+}, k = /* @__PURE__ */ p(S, [["__scopeId", "data-v-dcc6fa7a"]]), b = ["aria-pressed"], w = /* @__PURE__ */ c({
   __name: "SSwitch",
   props: {
     modelValue: { type: Boolean }
   },
   emits: ["update:modelValue"],
-  setup(t, { emit: e }) {
-    const o = t, s = e;
-    function n() {
-      s("update:modelValue", !o.modelValue);
+  setup(n, { emit: t }) {
+    const o = n, l = t;
+    function e() {
+      l("update:modelValue", !o.modelValue);
     }
-    return (a, h) => (l(), _("button", {
+    return (s, a) => (d(), u("button", {
       class: "s-switch",
-      onClick: n,
-      "aria-pressed": a.modelValue,
+      onClick: e,
+      "aria-pressed": s.modelValue,
       role: "switch"
     }, [
-      u("div", {
-        class: i(["s-thumb", { active: a.modelValue }])
+      i("div", {
+        class: m(["s-thumb", { active: s.modelValue }])
       }, null, 2)
-    ], 8, f));
+    ], 8, b));
   }
 });
-const y = /* @__PURE__ */ d(v, [["__scopeId", "data-v-06d59c3f"]]);
+const C = /* @__PURE__ */ p(w, [["__scopeId", "data-v-06d59c3f"]]), B = { class: "s-input-wrapper" }, I = ["type", "placeholder"], g = /* @__PURE__ */ c({
+  __name: "SInput",
+  props: {
+    modelValue: {},
+    placeholder: {},
+    type: {}
+  },
+  emits: ["update:modelValue"],
+  setup(n, { emit: t }) {
+    const o = n, l = t, e = v(o.modelValue);
+    return f(
+      () => o.modelValue,
+      (s) => {
+        s !== e.value && (e.value = s);
+      }
+    ), (s, a) => (d(), u("div", B, [
+      h(i("input", {
+        class: "s-input",
+        type: s.type,
+        placeholder: s.placeholder,
+        "onUpdate:modelValue": a[0] || (a[0] = (_) => e.value = _),
+        onInput: a[1] || (a[1] = (_) => l("update:modelValue", e.value))
+      }, null, 40, I), [
+        [y, e.value]
+      ])
+    ]));
+  }
+});
+const x = /* @__PURE__ */ p(g, [["__scopeId", "data-v-0e0c92c6"]]);
 export {
-  b as SButton,
-  y as SSwitch
+  k as SButton,
+  x as SInput,
+  C as SSwitch
 };
