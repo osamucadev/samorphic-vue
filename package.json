@@ -2,9 +2,7 @@
   "name": "samorphic-vue",
   "version": "1.0.0",
   "dependencies": {
-    "sass": "^1.89.1",
-    "unplugin-vue-components": "^0.26.0",
-    "vue": "^3.5.16"
+    "sass": "^1.89.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.4",
@@ -39,8 +37,15 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "keywords": [
+    "vue3",
+    "components",
+    "neumorphism",
+    "samorphic",
+    "ui",
+    "library"
+  ],
+  "author": "Seu Nome srcaetite@gmail.com",
+  "license": "MIT",
+  "description": "A Vue 3 component library styled with neumorphism, including buttons, inputs, cards, and more."
 }
