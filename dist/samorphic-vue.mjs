@@ -1,25 +1,24 @@
-import { defineComponent as _, openBlock as r, createElementBlock as d, createTextVNode as a, renderSlot as c } from "vue";
-const l = ["disabled"], p = /* @__PURE__ */ _({
+import { defineComponent as _, openBlock as c, createElementBlock as d, renderSlot as r } from "vue";
+const a = ["disabled"], l = /* @__PURE__ */ _({
   __name: "SButton",
   props: {
     disabled: { type: Boolean }
   },
-  setup(o) {
-    return (t, e) => (r(), d("button", {
+  setup(e) {
+    return (t, o) => (c(), d("button", {
       class: "s-button",
       disabled: t.disabled
     }, [
-      e[0] || (e[0] = a(" Teste ")),
-      c(t.$slots, "default", {}, void 0, !0)
-    ], 8, l));
+      r(t.$slots, "default", {}, void 0, !0)
+    ], 8, a));
   }
 });
-const u = (o, t) => {
-  const e = o.__vccOpts || o;
-  for (const [s, n] of t)
-    e[s] = n;
-  return e;
-}, b = /* @__PURE__ */ u(p, [["__scopeId", "data-v-bfce1a62"]]);
+const p = (e, t) => {
+  const o = e.__vccOpts || e;
+  for (const [n, s] of t)
+    o[n] = s;
+  return o;
+}, f = /* @__PURE__ */ p(l, [["__scopeId", "data-v-c8fd2cf1"]]);
 export {
-  b as SButton
+  f as SButton
 };

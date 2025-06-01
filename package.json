@@ -16,7 +16,8 @@
     "vue-tsc": "^1.8.27"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "dev:watch": "vite build --watch"
   },
   "main": "./dist/samorphic-vue.umd.js",
   "module": "./dist/samorphic-vue.mjs",
