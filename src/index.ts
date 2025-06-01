@@ -8,3 +8,4 @@ export { default as SAvatar } from "./components/SAvatar.vue";
 export { default as SIconButton } from "./components/SIconButton.vue";
 export { default as SToastContainer } from "./components/SToastContainer.vue";
 export * from "./composables/useToast";
+export { default as SamorphicVue } from "./plugin";

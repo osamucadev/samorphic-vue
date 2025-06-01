@@ -1,47 +1,80 @@
-import { defineComponent as l, openBlock as a, createElementBlock as _, renderSlot as v, createElementVNode as p, normalizeClass as f, ref as S, watch as b, withDirectives as g, vModelDynamic as $, toDisplayString as u, unref as h, createCommentVNode as y, inject as I, Fragment as V, renderList as k, createBlock as B, mergeProps as C, reactive as w } from "vue";
-import './index.css';const T = ["disabled"], A = /* @__PURE__ */ l({
+import { defineComponent as i, openBlock as a, createElementBlock as c, renderSlot as v, createElementVNode as p, normalizeClass as f, ref as y, watch as g, withDirectives as b, vModelDynamic as $, toDisplayString as m, unref as h, createCommentVNode as S, inject as V, Fragment as I, renderList as B, createBlock as C, mergeProps as k, reactive as T } from "vue";
+import './index.css';const w = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  get SAvatar() {
+    return R;
+  },
+  get SButton() {
+    return O;
+  },
+  get SCard() {
+    return L;
+  },
+  get SIconButton() {
+    return Y;
+  },
+  get SInput() {
+    return U;
+  },
+  get SSwitch() {
+    return E;
+  },
+  get SToastContainer() {
+    return ae;
+  },
+  get SamorphicVue() {
+    return ie;
+  },
+  get toastState() {
+    return l;
+  },
+  get useToast() {
+    return _e;
+  }
+}, Symbol.toStringTag, { value: "Module" }));
+const j = ["disabled"], A = /* @__PURE__ */ i({
   __name: "SButton",
   props: {
     disabled: { type: Boolean }
   },
   setup(n) {
-    return (e, o) => (a(), _("button", {
+    return (e, t) => (a(), c("button", {
       class: "s-button",
       disabled: e.disabled
     }, [
       v(e.$slots, "default", {}, void 0, !0)
-    ], 8, T));
+    ], 8, j));
   }
 });
-const i = (n, e) => {
-  const o = n.__vccOpts || n;
-  for (const [t, s] of e)
-    o[t] = s;
-  return o;
-}, ee = /* @__PURE__ */ i(A, [["__scopeId", "data-v-dcc6fa7a"]]), D = ["aria-pressed"], j = /* @__PURE__ */ l({
+const d = (n, e) => {
+  const t = n.__vccOpts || n;
+  for (const [s, o] of e)
+    t[s] = o;
+  return t;
+}, O = /* @__PURE__ */ d(A, [["__scopeId", "data-v-dcc6fa7a"]]), D = ["aria-pressed"], z = /* @__PURE__ */ i({
   __name: "SSwitch",
   props: {
     modelValue: { type: Boolean }
   },
   emits: ["update:modelValue"],
   setup(n, { emit: e }) {
-    const o = n, t = e;
-    function s() {
-      t("update:modelValue", !o.modelValue);
+    const t = n, s = e;
+    function o() {
+      s("update:modelValue", !t.modelValue);
     }
-    return (c, d) => (a(), _("button", {
+    return (_, r) => (a(), c("button", {
       class: "s-switch",
-      onClick: s,
-      "aria-pressed": c.modelValue,
+      onClick: o,
+      "aria-pressed": _.modelValue,
       role: "switch"
     }, [
       p("div", {
-        class: f(["s-thumb", { active: c.modelValue }])
+        class: f(["s-thumb", { active: _.modelValue }])
       }, null, 2)
     ], 8, D));
   }
 });
-const te = /* @__PURE__ */ i(j, [["__scopeId", "data-v-06d59c3f"]]), E = { class: "s-input-wrapper" }, N = ["type", "placeholder"], U = /* @__PURE__ */ l({
+const E = /* @__PURE__ */ d(z, [["__scopeId", "data-v-06d59c3f"]]), M = { class: "s-input-wrapper" }, N = ["type", "placeholder"], P = /* @__PURE__ */ i({
   __name: "SInput",
   props: {
     modelValue: {},
@@ -50,37 +83,37 @@ const te = /* @__PURE__ */ i(j, [["__scopeId", "data-v-06d59c3f"]]), E = { class
   },
   emits: ["update:modelValue"],
   setup(n, { emit: e }) {
-    const o = n, t = e, s = S(o.modelValue);
-    return b(
-      () => o.modelValue,
-      (c) => {
-        c !== s.value && (s.value = c);
+    const t = n, s = e, o = y(t.modelValue);
+    return g(
+      () => t.modelValue,
+      (_) => {
+        _ !== o.value && (o.value = _);
       }
-    ), (c, d) => (a(), _("div", E, [
-      g(p("input", {
+    ), (_, r) => (a(), c("div", M, [
+      b(p("input", {
         class: "s-input",
-        type: c.type,
-        placeholder: c.placeholder,
-        "onUpdate:modelValue": d[0] || (d[0] = (r) => s.value = r),
-        onInput: d[1] || (d[1] = (r) => t("update:modelValue", s.value))
+        type: _.type,
+        placeholder: _.placeholder,
+        "onUpdate:modelValue": r[0] || (r[0] = (u) => o.value = u),
+        onInput: r[1] || (r[1] = (u) => s("update:modelValue", o.value))
       }, null, 40, N), [
-        [$, s.value]
+        [$, o.value]
       ])
     ]));
   }
 });
-const se = /* @__PURE__ */ i(U, [["__scopeId", "data-v-0e0c92c6"]]), x = { class: "s-card" }, z = /* @__PURE__ */ l({
+const U = /* @__PURE__ */ d(P, [["__scopeId", "data-v-0e0c92c6"]]), x = { class: "s-card" }, F = /* @__PURE__ */ i({
   __name: "SCard",
   props: {
     padding: {}
   },
   setup(n) {
-    return (e, o) => (a(), _("div", x, [
+    return (e, t) => (a(), c("div", x, [
       v(e.$slots, "default", {}, void 0, !0)
     ]));
   }
 });
-const oe = /* @__PURE__ */ i(z, [["__scopeId", "data-v-774e84bc"]]), F = { class: "s-avatar" }, L = { class: "s-avatar-img" }, M = ["src", "alt"], O = { key: 1 }, P = { class: "s-avatar-name" }, q = /* @__PURE__ */ l({
+const L = /* @__PURE__ */ d(F, [["__scopeId", "data-v-774e84bc"]]), q = { class: "s-avatar" }, G = { class: "s-avatar-img" }, H = ["src", "alt"], J = { key: 1 }, K = { class: "s-avatar-name" }, Q = /* @__PURE__ */ i({
   __name: "SAvatar",
   props: {
     name: {},
@@ -88,37 +121,37 @@ const oe = /* @__PURE__ */ i(z, [["__scopeId", "data-v-774e84bc"]]), F = { class
     alt: {}
   },
   setup(n) {
-    const o = n.name.split(" ").map((t) => t[0]).join("").slice(0, 2).toUpperCase();
-    return (t, s) => (a(), _("div", F, [
-      p("div", L, [
-        t.src ? (a(), _("img", {
+    const t = n.name.split(" ").map((s) => s[0]).join("").slice(0, 2).toUpperCase();
+    return (s, o) => (a(), c("div", q, [
+      p("div", G, [
+        s.src ? (a(), c("img", {
           key: 0,
-          src: t.src,
-          alt: t.alt || t.name
-        }, null, 8, M)) : (a(), _("span", O, u(h(o)), 1))
+          src: s.src,
+          alt: s.alt || s.name
+        }, null, 8, H)) : (a(), c("span", J, m(h(t)), 1))
       ]),
-      p("div", P, u(t.name), 1)
+      p("div", K, m(s.name), 1)
     ]));
   }
 });
-const ne = /* @__PURE__ */ i(q, [["__scopeId", "data-v-f21102d9"]]), G = ["disabled"], H = /* @__PURE__ */ l({
+const R = /* @__PURE__ */ d(Q, [["__scopeId", "data-v-f21102d9"]]), W = ["disabled"], X = /* @__PURE__ */ i({
   __name: "SIconButton",
   props: {
     disabled: { type: Boolean }
   },
   emits: ["click"],
   setup(n, { emit: e }) {
-    const o = e;
-    return (t, s) => (a(), _("button", {
+    const t = e;
+    return (s, o) => (a(), c("button", {
       class: "s-icon-button",
-      disabled: t.disabled,
-      onClick: s[0] || (s[0] = (c) => o("click"))
+      disabled: s.disabled,
+      onClick: o[0] || (o[0] = (_) => t("click"))
     }, [
-      v(t.$slots, "default", {}, void 0, !0)
-    ], 8, G));
+      v(s.$slots, "default", {}, void 0, !0)
+    ], 8, W));
   }
 });
-const ae = /* @__PURE__ */ i(H, [["__scopeId", "data-v-7e6c0906"]]), J = { key: 0 }, K = { key: 1 }, Q = /* @__PURE__ */ l({
+const Y = /* @__PURE__ */ d(X, [["__scopeId", "data-v-7e6c0906"]]), Z = { key: 0 }, ee = { key: 1 }, te = /* @__PURE__ */ i({
   __name: "SToast",
   props: {
     title: {},
@@ -126,55 +159,63 @@ const ae = /* @__PURE__ */ i(H, [["__scopeId", "data-v-7e6c0906"]]), J = { key: 
     type: {}
   },
   setup(n) {
-    return (e, o) => (a(), _("div", {
+    return (e, t) => (a(), c("div", {
       class: f(["s-toast", e.type])
     }, [
-      e.title ? (a(), _("strong", J, u(e.title), 1)) : y("", !0),
-      e.message ? (a(), _("p", K, u(e.message), 1)) : y("", !0)
+      e.title ? (a(), c("strong", Z, m(e.title), 1)) : S("", !0),
+      e.message ? (a(), c("p", ee, m(e.message), 1)) : S("", !0)
     ], 2));
   }
 });
-const R = /* @__PURE__ */ i(Q, [["__scopeId", "data-v-bb65467b"]]), W = { class: "s-toast-container" }, X = /* @__PURE__ */ l({
+const se = /* @__PURE__ */ d(te, [["__scopeId", "data-v-bb65467b"]]), oe = { class: "s-toast-container" }, ne = /* @__PURE__ */ i({
   __name: "SToastContainer",
   setup(n) {
-    const e = I("samorphic-toasts");
-    return (o, t) => (a(), _("div", W, [
-      (a(!0), _(V, null, k(h(e), (s) => (a(), B(R, C({
-        key: s.id
-      }, { ref_for: !0 }, s), null, 16))), 128))
+    const e = V("samorphic-toasts");
+    return (t, s) => (a(), c("div", oe, [
+      (a(!0), c(I, null, B(h(e), (o) => (a(), C(se, k({
+        key: o.id
+      }, { ref_for: !0 }, o), null, 16))), 128))
     ]));
   }
 });
-const _e = /* @__PURE__ */ i(X, [["__scopeId", "data-v-95a0aa15"]]);
-let Y = 0;
-const m = w([]);
-function ce() {
+const ae = /* @__PURE__ */ d(ne, [["__scopeId", "data-v-95a0aa15"]]);
+let ce = 0;
+const l = T([]);
+function _e() {
   return function({
     title: e,
-    message: o,
-    type: t = "info",
-    timeout: s = 4e3
+    message: t,
+    type: s = "info",
+    timeout: o = 4e3
   }) {
-    const c = {
-      id: Y++,
+    const _ = {
+      id: ce++,
       title: e,
-      message: o,
-      type: t
+      message: t,
+      type: s
     };
-    m.push(c), setTimeout(() => {
-      const d = m.findIndex((r) => r.id === c.id);
-      d !== -1 && m.splice(d, 1);
-    }, s);
+    l.push(_), setTimeout(() => {
+      const r = l.findIndex((u) => u.id === _.id);
+      r !== -1 && l.splice(r, 1);
+    }, o);
   };
 }
+const re = {
+  install(n) {
+    for (const [e, t] of Object.entries(w))
+      t && typeof t == "object" && n.component(e, t);
+    n.provide("samorphic-toasts", l);
+  }
+}, ie = re;
 export {
-  ne as SAvatar,
-  ee as SButton,
-  oe as SCard,
-  ae as SIconButton,
-  se as SInput,
-  te as SSwitch,
-  _e as SToastContainer,
-  m as toastState,
-  ce as useToast
+  R as SAvatar,
+  O as SButton,
+  L as SCard,
+  Y as SIconButton,
+  U as SInput,
+  E as SSwitch,
+  ae as SToastContainer,
+  ie as SamorphicVue,
+  l as toastState,
+  _e as useToast
 };
