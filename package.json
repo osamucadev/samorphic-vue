@@ -1,6 +1,6 @@
 {
   "name": "samorphic-vue",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "dependencies": {
     "sass": "^1.89.1"
   },
@@ -23,16 +23,15 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "main": "./dist/samorphic-vue.umd.js",
+  "main": "./dist/samorphic-vue.umd.cjs",
   "module": "./dist/samorphic-vue.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/samorphic-vue.mjs",
-      "require": "./dist/samorphic-vue.umd.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/samorphic-vue.umd.cjs"
     }
   },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
