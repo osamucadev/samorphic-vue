@@ -10,6 +10,7 @@ export default defineConfig({
         items: [
           { text: "SButton", link: "/components/SButton" },
           { text: "SToast", link: "/components/SToast" },
+          { text: "SInput", link: "/components/SInput" },
         ],
       },
     ],
