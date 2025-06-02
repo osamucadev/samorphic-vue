@@ -13,6 +13,7 @@ export default defineConfig({
           { text: "SInput", link: "/components/SInput" },
           { text: "SCard", link: "/components/SCard" },
           { text: "SAvatar", link: "/components/SAvatar" },
+          { text: "SIconButton", link: "/components/SIconButton" },
         ],
       },
     ],
