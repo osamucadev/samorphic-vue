@@ -7,7 +7,10 @@ export default defineConfig({
     sidebar: [
       {
         text: "Components",
-        items: [{ text: "SButton", link: "/components/SButton" }],
+        items: [
+          { text: "SButton", link: "/components/SButton" },
+          { text: "SToast", link: "/components/SToast" },
+        ],
       },
     ],
   },
