@@ -11,6 +11,7 @@ export default defineConfig({
           { text: "SButton", link: "/components/SButton" },
           { text: "SToast", link: "/components/SToast" },
           { text: "SInput", link: "/components/SInput" },
+          { text: "SCard", link: "/components/SCard" },
         ],
       },
     ],
