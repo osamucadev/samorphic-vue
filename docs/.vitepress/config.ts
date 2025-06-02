@@ -14,6 +14,7 @@ export default defineConfig({
           { text: "SCard", link: "/components/SCard" },
           { text: "SAvatar", link: "/components/SAvatar" },
           { text: "SIconButton", link: "/components/SIconButton" },
+          { text: "SSwitch", link: "/components/SSwitch" },
         ],
       },
     ],
