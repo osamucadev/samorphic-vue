@@ -2,16 +2,12 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "Samorphic Vue",
-  description: "A neomorphic Vue 3 component library",
+  description: "A neumorphic UI component library for Vue 3",
   themeConfig: {
-    nav: [
-      { text: "Guide", link: "/" },
-      { text: "GitHub", link: "https://github.com/seu-usuario/samorphic-vue" },
-    ],
     sidebar: [
       {
-        text: "Guide",
-        items: [{ text: "Introduction", link: "/" }],
+        text: "Components",
+        items: [{ text: "SButton", link: "/components/SButton" }],
       },
     ],
   },
